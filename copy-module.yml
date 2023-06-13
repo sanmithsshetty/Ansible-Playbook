@@ -1,0 +1,13 @@
+---
+- name: move one file from one folder to anothe  folder
+  hosts: all
+  become: true
+
+  tasks:
+  - name: move module
+      ansible.builtin.copy:
+      src: /home/ubuntu/apache-maven-3.9.2-bin.tar.gz
+      dest: /var/www/html/apache.gz
+      mode: 0777
+
+
